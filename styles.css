@@ -8,6 +8,16 @@
   --cursor-text: #ffffff;
 }
 
+html {
+  scrollbar-width: none;
+}
+
+html::-webkit-scrollbar,
+body::-webkit-scrollbar {
+  width: 0;
+  height: 0;
+}
+
 @media (pointer: fine) {
   body {
     cursor: none;
@@ -102,6 +112,10 @@
   padding-bottom: calc(24px + 30px + 24px);
 }
 
+.about-mobile-hero {
+  display: none;
+}
+
 .about-grid-wrap {
   width: min(calc(100vw - 48px), 1512px);
   margin: 0 auto;
@@ -158,41 +172,33 @@
   .about-top-name {
     top: 14px;
     font-size: 12px;
-    letter-spacing: 1.8px;
+    letter-spacing: 2px;
   }
 
   .about-shell-static {
-    padding: 36px 12px 68px;
+    padding: 48px 24px 78px;
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+    gap: 18px;
   }
 
   .about-grid-wrap {
+    display: none;
+  }
+
+  .about-mobile-hero {
+    display: block;
     width: 100%;
+    max-width: 100%;
+    height: calc(100dvh - 48px - 78px - 36px);
+    object-fit: contain;
+    object-position: center top;
   }
 
-  .about-cell {
-    height: 98px;
-  }
-
-  .photography { width: 82%; left: 6%; top: 6px; }
-  .nift { width: 165%; top: 51%; left: 50%; }
-  .typeface { width: 86%; right: 5%; top: 22px; }
-  .three-d { width: 72%; right: 2%; top: 12px; }
-  .graphic { width: 68%; left: 7%; top: 16px; }
-  .brand { width: 72%; left: 10%; top: 18px; }
-  .motion { width: 120%; left: 50%; top: 54%; }
-  .genai { width: 52%; right: 8%; top: 50%; }
-
-  .about-copy {
-    gap: 4px;
-  }
-
-  .about-copy h1 {
-    font-size: 20px;
-    text-underline-offset: 4px;
-  }
-
-  .about-copy p {
-    font-size: 10px;
+  .about-page-static .bottom-nav {
+    left: 24px;
+    right: 24px;
+    bottom: 24px;
   }
 }
 
@@ -853,11 +859,19 @@ a { color: inherit; text-decoration: none; }
   body {
     font-size: 12px;
     letter-spacing: 1.6px;
+    scrollbar-width: none;
+  }
+
+  body::-webkit-scrollbar {
+    width: 0;
+    height: 0;
   }
 
   .top-name,
   .top-role {
     top: 16px;
+    left: 50%;
+    transform: translateX(-50%);
     font-size: 12px;
     letter-spacing: 2px;
     z-index: 60;
@@ -869,9 +883,9 @@ a { color: inherit; text-decoration: none; }
   }
 
   .bottom-nav {
-    left: 12px;
-    right: 12px;
-    bottom: 12px;
+    left: 16px;
+    right: 16px;
+    bottom: 16px;
     grid-template-columns: repeat(3, minmax(0, 1fr)) auto;
     z-index: 70;
   }
@@ -899,15 +913,15 @@ a { color: inherit; text-decoration: none; }
   }
 
   .page {
-    padding: 64px 12px 58px;
+    padding: 64px 16px 64px;
   }
 
   .home-page .page {
-    padding: 16px 12px 12px;
+    padding: 16px;
   }
 
   .home-canvas {
-    width: min(calc(100vw - 24px), 430px);
+    width: min(calc(100vw - 32px), 430px);
     aspect-ratio: 390 / 760;
   }
 
@@ -947,8 +961,7 @@ a { color: inherit; text-decoration: none; }
     height: 100dvh;
     overflow: hidden;
     align-items: stretch;
-    padding-top: calc(16px + 14px + 24px);
-    padding-bottom: calc(12px + 24px + 18px);
+    padding: 16px;
   }
 
   .works-page {
@@ -957,9 +970,9 @@ a { color: inherit; text-decoration: none; }
   }
 
   .works-page .top-name {
-    left: 24px;
-    transform: none;
-    text-align: left;
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
   }
 
   .works-rail {
@@ -1001,19 +1014,21 @@ a { color: inherit; text-decoration: none; }
   }
 
   .project-shell {
-    display: block;
+    display: flex;
+    flex-direction: column;
     height: 100dvh;
     overflow-y: auto;
     overflow-x: hidden;
-    padding: 24px 24px 76px;
+    padding: 16px;
+    gap: 24px;
   }
 
   .project-left .top-name {
     position: static;
     transform: none;
     display: block;
-    text-align: left;
-    margin: 0 0 24px;
+    text-align: center;
+    margin: 0;
     font-size: 14px;
     letter-spacing: 2px;
     line-height: 1.14;
@@ -1043,7 +1058,7 @@ a { color: inherit; text-decoration: none; }
     font-size: 10px;
     line-height: 1.4;
     letter-spacing: 0;
-    margin-bottom: 18px;
+    margin-bottom: 24px;
     max-width: 100%;
   }
 
@@ -1053,30 +1068,52 @@ a { color: inherit; text-decoration: none; }
 
   .project-right {
     height: auto;
-    overflow: visible;
-    padding-top: 24px;
-    padding-bottom: 0;
-    gap: 12px;
+    overflow-y: auto;
+    overflow-x: hidden;
+    padding: 0;
+    gap: 24px;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+  }
+
+  .project-right::-webkit-scrollbar {
+    width: 0;
+    height: 0;
   }
 
   .project-left .bottom-nav {
-    left: 24px;
-    right: 24px;
-    bottom: 24px;
+    position: static;
+    left: auto;
+    right: auto;
+    bottom: auto;
+    margin-top: 24px;
   }
 
   .play-shell {
-    padding-top: calc(16px + 14px + 24px);
-    padding-bottom: calc(24px + 24px + 24px);
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+    height: 100dvh;
+    overflow: hidden;
+    padding: 16px;
+    gap: 24px;
   }
 
   .play-board {
     grid-template-columns: 1fr;
-    gap: 12px;
+    gap: 24px;
+    overflow-y: auto;
+    overflow-x: hidden;
+    padding-right: 0;
   }
 
   .play-col {
-    display: contents;
-    gap: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+  }
+
+  .play-page .top-name {
+    left: 50%;
+    transform: translateX(-50%);
   }
 }
