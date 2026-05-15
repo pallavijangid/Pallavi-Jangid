@@ -183,6 +183,9 @@
 
   const attachScrollRouting = () => {
     pages.forEach(({ page, rail, axis }) => {
+      const isMobileWorks = axis === 'x' && window.matchMedia('(max-width: 768px)').matches;
+      if (isMobileWorks) return;
+
       let touchStartY = 0;
       let touchStartX = 0;
       let touchActive = false;
@@ -195,7 +198,7 @@
         const primaryDelta = Math.abs(deltaX) > Math.abs(deltaY) ? deltaX : deltaY;
 
         if (axis === 'x') {
-          scrollTarget.scrollLeft += primaryDelta;
+          scrollTarget.scrollLeft += deltaY || deltaX;
           return;
         }
 

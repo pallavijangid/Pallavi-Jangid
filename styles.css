@@ -497,6 +497,22 @@ a { color: inherit; text-decoration: none; }
   overflow: hidden;
 }
 
+.works-page .top-name {
+  position: fixed;
+  top: 16px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 40;
+}
+
+.works-page .bottom-nav {
+  position: fixed;
+  left: 16px;
+  right: 16px;
+  bottom: 16px;
+  z-index: 45;
+}
+
 .works-shell {
   display: grid;
   align-items: center;
@@ -542,7 +558,7 @@ a { color: inherit; text-decoration: none; }
   font-weight: 500;
 }
 
-@media (max-width: 1024px) {
+@media (max-width: 1100px) {
   .works-rail {
     gap: 34px;
   }
@@ -709,20 +725,25 @@ a { color: inherit; text-decoration: none; }
   }
 
   .project-shell {
-    display: block;
-    height: 100dvh;
-    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    min-height: 0;
+    overflow-y: auto;
+    overflow-x: hidden;
     padding: 0;
+    gap: 16px;
   }
 
   .project-left {
-    position: fixed;
-    inset: 0 0 auto 0;
-    height: 64px;
+    position: static;
+    inset: auto;
+    height: auto;
     border-right: 0;
-    background: #fff;
-    z-index: 20;
+    background: transparent;
+    z-index: auto;
     padding: 0;
+    display: block;
   }
 
   .project-page .top-name {
@@ -739,31 +760,37 @@ a { color: inherit; text-decoration: none; }
   }
 
   .project-copy {
-    display: none;
+    display: block;
+    margin: 0;
+    max-height: none;
+    overflow: visible;
+    padding-right: 0;
   }
 
   .project-page .bottom-nav {
-    position: absolute;
-    left: 12px;
-    right: 12px;
-    bottom: 12px;
+    position: static;
+    left: auto;
+    right: auto;
+    bottom: auto;
+    width: 100%;
     display: grid;
+    margin-top: 0;
     z-index: 30;
   }
 
   .project-right {
-    position: absolute;
-    left: 0;
-    right: 0;
-    top: 64px;
-    bottom: 72px;
+    position: static;
+    left: auto;
+    right: auto;
+    top: auto;
+    bottom: auto;
     height: auto;
-    overflow-y: auto;
+    overflow-y: visible;
     overflow-x: hidden;
-    padding: 0 12px;
-    gap: 12px;
+    padding: 0;
+    gap: 16px;
     align-content: start;
-    -webkit-overflow-scrolling: touch;
+    -webkit-overflow-scrolling: auto;
   }
 
   .project-right img {
@@ -779,11 +806,19 @@ a { color: inherit; text-decoration: none; }
   height: 100dvh;
 }
 
+.play-page {
+  display: grid;
+  grid-template-rows: auto minmax(0, 1fr) auto;
+  gap: 16px;
+  padding: 16px;
+}
+
 .play-page .top-name {
-  position: fixed;
-  top: 16px;
-  left: 50%;
-  transform: translateX(-50%);
+  position: static;
+  top: auto;
+  left: auto;
+  transform: none;
+  justify-self: center;
 }
 
 .play-shell {
@@ -791,6 +826,21 @@ a { color: inherit; text-decoration: none; }
   overflow: hidden;
   padding-top: calc(16px + 14px + 40px);
   padding-bottom: calc(16px + 28px + 40px);
+}
+
+.play-shell {
+  height: 100%;
+  min-height: 0;
+  padding: 0;
+}
+
+.play-page .bottom-nav {
+  position: static;
+  left: auto;
+  right: auto;
+  bottom: auto;
+  width: 100%;
+  margin: 0;
 }
 
 .play-board {
@@ -1028,7 +1078,7 @@ a { color: inherit; text-decoration: none; }
     flex-direction: column;
     height: 100%;
     min-height: 0;
-    overflow: hidden;
+    overflow-y: auto;
     overflow-x: hidden;
     padding: 0;
     gap: 16px;
@@ -1078,15 +1128,17 @@ a { color: inherit; text-decoration: none; }
   }
 
   .project-right {
-    flex: 1 1 auto;
-    min-height: 0;
+    flex: none;
+    min-height: auto;
     height: auto;
-    overflow-y: auto;
+    overflow-y: visible;
     overflow-x: hidden;
     padding: 0;
     gap: 16px;
+    align-content: start;
     scrollbar-width: none;
     -ms-overflow-style: none;
+    -webkit-overflow-scrolling: auto;
   }
 
   .project-right::-webkit-scrollbar {
