@@ -2,8 +2,8 @@
   const isFinePointer = window.matchMedia('(pointer: fine)').matches;
   const body = document.body;
   const pages = [
-    { page: document.querySelector('.works-page'), rail: document.querySelector('.works-rail') },
-    { page: document.querySelector('.project-page'), rail: document.querySelector('.project-right') }
+    { page: document.querySelector('.works-page'), rail: document.querySelector('.works-rail'), axis: 'x' },
+    { page: document.querySelector('.project-page'), rail: document.querySelector('.project-right'), axis: 'y' }
   ].filter((entry) => entry.page && entry.rail);
 
   const cursorMap = {
@@ -182,19 +182,50 @@
   };
 
   const attachScrollRouting = () => {
-    pages.forEach(({ page, rail }) => {
+    pages.forEach(({ page, rail, axis }) => {
       let touchStartY = 0;
       let touchStartX = 0;
       let touchActive = false;
+      let touchGestureX = 0;
+      let touchGestureY = 0;
+      let touchBackTriggered = false;
       const scrollTarget = rail;
 
       const routeScroll = (deltaX, deltaY) => {
-        scrollTarget.scrollLeft += deltaX;
-        scrollTarget.scrollTop += deltaY;
+        const primaryDelta = Math.abs(deltaX) > Math.abs(deltaY) ? deltaX : deltaY;
+
+        if (axis === 'x') {
+          scrollTarget.scrollLeft += primaryDelta;
+          return;
+        }
+
+        scrollTarget.scrollTop += primaryDelta * 0.35;
+      };
+
+      const maybeGoBackToWorks = (deltaX, deltaY, source) => {
+        if (axis !== 'y') return false;
+        const horizontalGesture = Math.abs(deltaX) > Math.abs(deltaY) * 1.2;
+        if (!horizontalGesture) return false;
+
+        if (source === 'wheel') {
+          if (deltaX < -40) {
+            window.location.href = 'works.html';
+            return true;
+          }
+          return false;
+        }
+
+        if (deltaX > 40) {
+          touchBackTriggered = true;
+          return true;
+        }
+
+        return false;
       };
 
       const wheelHandler = (event) => {
         event.preventDefault();
+        if (maybeGoBackToWorks(event.deltaX, event.deltaY, 'wheel')) return;
         routeScroll(event.deltaX, event.deltaY);
       };
 
@@ -204,6 +235,9 @@
         touchStartX = touch.clientX;
         touchStartY = touch.clientY;
         touchActive = true;
+        touchGestureX = 0;
+        touchGestureY = 0;
+        touchBackTriggered = false;
       };
 
       const touchMoveHandler = (event) => {
@@ -214,6 +248,12 @@
         const deltaY = touchStartY - touch.clientY;
         touchStartX = touch.clientX;
         touchStartY = touch.clientY;
+        touchGestureX += deltaX;
+        touchGestureY += deltaY;
+        if (maybeGoBackToWorks(touchGestureX, touchGestureY, 'touch')) {
+          event.preventDefault();
+          return;
+        }
         routeScroll(deltaX, deltaY);
         event.preventDefault();
       };
@@ -240,7 +280,11 @@
       window.addEventListener('touchmove', touchMoveHandler, { passive: false });
 
       const touchEndHandler = () => {
+        if (touchBackTriggered) {
+          window.location.href = 'works.html';
+        }
         touchActive = false;
+        touchBackTriggered = false;
       };
 
       page.addEventListener('touchend', touchEndHandler);
