@@ -516,11 +516,15 @@ a { color: inherit; text-decoration: none; }
 .works-shell {
   display: grid;
   align-items: center;
+  width: 100%;
+  min-width: 0;
 }
 
 .works-rail {
   display: flex;
   gap: 80px;
+  width: 100%;
+  min-width: 0;
   overflow-x: auto;
   overflow-y: hidden;
   padding: 0;
@@ -534,6 +538,7 @@ a { color: inherit; text-decoration: none; }
 
 .work-item {
   flex: 0 0 min(66vw, 980px);
+  min-width: 0;
   display: flex;
   flex-direction: column;
   text-decoration: none;
@@ -1044,6 +1049,7 @@ a { color: inherit; text-decoration: none; }
     overflow-x: hidden;
     padding-bottom: 0;
     scroll-snap-type: none;
+    -webkit-overflow-scrolling: touch;
   }
 
   .work-item {
