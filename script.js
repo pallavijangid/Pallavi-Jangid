@@ -261,26 +261,23 @@
         event.preventDefault();
       };
 
-      page.addEventListener(
+      window.addEventListener(
         'wheel',
         wheelHandler,
-        { passive: false }
+        { passive: false, capture: true }
       );
-      window.addEventListener('wheel', wheelHandler, { passive: false });
 
-      page.addEventListener(
+      window.addEventListener(
         'touchstart',
         touchStartHandler,
-        { passive: true }
+        { passive: true, capture: true }
       );
-      window.addEventListener('touchstart', touchStartHandler, { passive: true });
 
-      page.addEventListener(
+      window.addEventListener(
         'touchmove',
         touchMoveHandler,
-        { passive: false }
+        { passive: false, capture: true }
       );
-      window.addEventListener('touchmove', touchMoveHandler, { passive: false });
 
       const touchEndHandler = () => {
         if (touchBackTriggered) {
@@ -290,8 +287,7 @@
         touchBackTriggered = false;
       };
 
-      page.addEventListener('touchend', touchEndHandler);
-      window.addEventListener('touchend', touchEndHandler);
+      window.addEventListener('touchend', touchEndHandler, { capture: true });
     });
   };
 
