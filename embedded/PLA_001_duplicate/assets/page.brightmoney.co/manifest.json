@@ -1,0 +1,11 @@
+{
+    "name": "CleverTap PWA App",
+    "short_name": "CTPWA",
+    "display": "standalone",
+    "background_color": "#E8F5E9",
+    "icons": [{
+      "src": "../images.brightmoney.co/AMP_LP/bright-favicon.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }]
+  }

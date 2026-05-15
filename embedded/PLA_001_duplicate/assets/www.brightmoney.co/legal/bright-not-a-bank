@@ -1,0 +1,659 @@
+<!DOCTYPE html><!-- This site was created in Webflow. https://webflow.com --><!-- Last Published: Fri May 08 2026 10:47:37 GMT+0000 (Coordinated Universal Time) --><html data-wf-domain="www.brightmoney.co" data-wf-page="68c3e3a7caa06b74af689a90" data-wf-site="68c3e3a7caa06b74af6898c6" lang="en"><head><meta charset="utf-8"/><link href="https://cdn.prod.website-files.com" rel="preconnect" crossorigin="anonymous"/><title>Bright - Reduce debt. Build credit. Plan for Debt Free life.</title><meta content="A new system for financial planning to delete debt and build wealth. Pay Down Debt Faster, Build Savings and Boost your Credit Score." name="description"/><meta content="Bright - Reduce debt. Build credit. Plan for Debt Free life." property="og:title"/><meta content="A new system for financial planning to delete debt and build wealth. Pay Down Debt Faster, Build Savings and Boost your Credit Score." property="og:description"/><meta content="https://bright-website-images.s3.us-west-2.amazonaws.com/bright+homepage+open+url+image.png" property="og:image"/><meta content="Bright - Reduce debt. Build credit. Plan for Debt Free life." property="twitter:title"/><meta content="A new system for financial planning to delete debt and build wealth. Pay Down Debt Faster, Build Savings and Boost your Credit Score." property="twitter:description"/><meta content="https://bright-website-images.s3.us-west-2.amazonaws.com/bright+homepage+open+url+image.png" property="twitter:image"/><meta property="og:type" content="website"/><meta content="summary_large_image" name="twitter:card"/><meta content="width=device-width, initial-scale=1" name="viewport"/><meta content="jAP_b5COz3Z8ImIJouRj-qQMdKoy0D7b26lhrAv2f1M" name="google-site-verification"/><meta content="Webflow" name="generator"/><link href="https://cdn.prod.website-files.com/68c3e3a7caa06b74af6898c6/css/dev-brightmoney.webflow.shared.0d2b1332a.min.css" rel="stylesheet" type="text/css" integrity="sha384-DSsTMq5buQIFwR8uIekKRZ3O9fUr1staXA5udJ/AdhElhXAv78461aCIf51AXGoh" crossorigin="anonymous"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link href="https://fonts.gstatic.com" rel="preconnect" crossorigin="anonymous"/><script src="https://ajax.googleapis.com/ajax/libs/webfont/1.6.26/webfont.js" type="text/javascript"></script><script type="text/javascript">WebFont.load({  google: {    families: ["Figtree:300,400,500,600,700"]  }});</script><script type="text/javascript">!function(o,c){var n=c.documentElement,t=" w-mod-";n.className+=t+"js",("ontouchstart"in o||o.DocumentTouch&&c instanceof DocumentTouch)&&(n.className+=t+"touch")}(window,document);</script><link href="https://cdn.prod.website-files.com/68c3e3a7caa06b74af6898c6/68c3e3a7caa06b74af689ab9_32x32.png" rel="shortcut icon" type="image/x-icon"/><link href="https://cdn.prod.website-files.com/68c3e3a7caa06b74af6898c6/68c3e3a7caa06b74af689abb_256x256.png" rel="apple-touch-icon"/><link href="https://www.brightmoney.co/legal/bright-not-a-bank" rel="canonical"/><!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-T7STBTWQ');</script>
+
+<!-- End Google Tag Manager --> 
+<script>
+            let getMixpanelTokenKey = ()=>{
+               return '5c4ae61de26c90f5494a07eb41e1d9d5';
+            }
+            (function(f, b) {
+                if (!b.__SV) {
+                    var e, g, i, h;
+                    window.mixpanel = b;
+                    b._i = [];
+                    b.init = function(e, f, c) {
+                        function g(a, d) {
+                            var b = d.split(".");
+                            2 == b.length && (a = a[b[0]],
+                            d = b[1]);
+                            a[d] = function() {
+                                a.push([d].concat(Array.prototype.slice.call(arguments, 0)))
+                            }
+                        }
+                        var a = b;
+                        "undefined" !== typeof c ? a = b[c] = [] : c = "mixpanel";
+                        a.people = a.people || [];
+                        a.toString = function(a) {
+                            var d = "mixpanel";
+                            "mixpanel" !== c && (d += "." + c);
+                            a || (d += " (stub)");
+                            return d
+                        }
+                        ;
+                        a.people.toString = function() {
+                            return a.toString(1) + ".people (stub)"
+                        }
+                        ;
+                        i = "disable time_event track track_pageview track_links track_forms track_with_groups add_group set_group remove_group register register_once alias unregister identify name_tag set_config reset opt_in_tracking opt_out_tracking has_opted_in_tracking has_opted_out_tracking clear_opt_in_out_tracking start_batch_senders people.set people.set_once people.unset people.increment people.append people.union people.track_charge people.clear_charges people.delete_user people.remove".split(" ");
+                        for (h = 0; h < i.length; h++)
+                            g(a, i[h]);
+                        var j = "set set_once union unset remove delete".split(" ");
+                        a.get_group = function() {
+                            function b(c) {
+                                d[c] = function() {
+                                    call2_args = arguments;
+                                    call2 = [c].concat(Array.prototype.slice.call(call2_args, 0));
+                                    a.push([e, call2])
+                                }
+                            }
+                            for (var d = {}, e = ["get_group"].concat(Array.prototype.slice.call(arguments, 0)), c = 0; c < j.length; c++)
+                                b(j[c]);
+                            return d
+                        }
+                        ;
+                        b._i.push([e, f, c])
+                    }
+                    ;
+                    b.__SV = 1.2;
+                    e = f.createElement("script");
+                    e.type = "text/javascript";
+                    e.async = !0;
+                    e.src = "undefined" !== typeof MIXPANEL_CUSTOM_LIB_URL ? MIXPANEL_CUSTOM_LIB_URL : "file:" === f.location.protocol && "//cdn.mxpnl.com/libs/mixpanel-2-latest.min.js".match(/^\/\//) ? "https://cdn.mxpnl.com/libs/mixpanel-2-latest.min.js" : "//cdn.mxpnl.com/libs/mixpanel-2-latest.min.js";
+                    g = f.getElementsByTagName("script")[0];
+                    g.parentNode.insertBefore(e, g)
+                }
+            }
+            )(document, window.mixpanel || []);
+
+            mixpanel.init(getMixpanelTokenKey());
+
+            window.analytics = {
+                identify: function(id) {
+                    window.mixpanel.identify(id);
+                },
+                track: function(name="", eventData={}) {
+                    window.mixpanel.track(name, eventData);
+                }
+            };
+        </script>
+
+ <script
+  async
+  custom-element="amp-bodymovin-animation"
+  src="https://cdn.ampproject.org/v0/amp-bodymovin-animation-0.1.js"
+></script>
+<script async src="https://cdn.ampproject.org/v0.js"></script>
+<script
+  async
+  custom-element="amp-analytics"
+  src="https://cdn.ampproject.org/v0/amp-analytics-0.1.js"
+></script>
+<script
+  async
+  custom-element="amp-iframe"
+  src="https://cdn.ampproject.org/v0/amp-iframe-0.1.js"
+></script>
+<script
+  async
+  custom-element="amp-form"
+  src="https://cdn.ampproject.org/v0/amp-form-0.1.js"
+></script>
+<script
+  async
+  custom-element="amp-lightbox"
+  src="https://cdn.ampproject.org/v0/amp-lightbox-0.1.js"
+></script>
+<script
+  async
+  custom-element="amp-accordion"
+  src="https://cdn.ampproject.org/v0/amp-accordion-0.1.js"
+></script>
+<script
+  async
+  custom-element="amp-bind"
+  src="https://cdn.ampproject.org/v0/amp-bind-0.1.js"
+></script>
+<script
+  async
+  custom-element="amp-fx-collection"
+  src="https://cdn.ampproject.org/v0/amp-fx-collection-0.1.js"
+></script>
+<script
+  async
+  custom-element="amp-animation"
+  src="https://cdn.ampproject.org/v0/amp-animation-0.1.js"
+></script>
+
+<link rel=“preconnect” href=“https://assets.website-files.com”>
+<link rel=“dns-prefetch” href=“https://assets.website-files.com”>
+
+<style>
+  * {
+    font-family: 'Figtree', sans-serif !important;
+  }
+
+/* Success Popup Styles */
+        .success-popup-backdrop {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.3);
+            backdrop-filter: blur(3px);
+            -webkit-backdrop-filter: blur(3px);
+            z-index: 999999999;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            opacity: 0;
+            visibility: hidden;
+            transition: all 0.3s ease;
+            overflow: hidden;
+        }
+
+        .success-popup-backdrop.active {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        .success-popup-modal {
+            background: #ffffff;
+            border-radius: 25.56px;
+            box-shadow: 0px 8.52px 17.04px -4.26px rgba(22, 34, 51, 0.08);
+            width: 620px;
+            max-width: 80vw;
+            transform: translateY(30px) scale(0.95);
+            transition: all 0.3s ease;
+        }
+
+        .success-popup-backdrop.active .success-popup-modal {
+            transform: translateY(0) scale(1);
+        }
+
+        .success-popup-content {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 24px;
+            padding: 32px 50px;
+        }
+
+        .success-icon {
+            width: 100px;
+            height: 100px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .success-icon img {
+            width: 100px;
+            height: 100px;
+        }
+
+        .success-text-content {
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+            align-self: stretch;
+        }
+
+        .success-title {
+            font-family: var(--font-fam-default);
+            font-weight: 600;
+            font-size: 36px;
+            line-height: 1.222em;
+            letter-spacing: -0.022em;
+            color: #0E1E14;
+            text-align: center;
+            margin: 0;
+            white-space: nowrap;
+        }
+
+        .success-subtitle {
+            font-family: var(--font-fam-default);
+            font-weight: 500;
+            font-size: 18px;
+            line-height: 1.25em;
+            letter-spacing: -0.2px;
+            color: #0E1E14;
+            text-align: center;
+            margin: 0;
+        }
+
+        .success-button-container {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            gap: 40px;
+        }
+
+        .success-got-it-button {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+            gap: 12px;
+            padding: 16px 48px;
+            width: 272px;
+            height: 58px;
+            background-color: #0E1E14;
+            border-radius: 12px;
+            border: none;
+            cursor: pointer;
+            transition: all 0.2s ease;
+            font-family: var(--font-fam-default);
+            font-weight: 600;
+            font-size: 16px;
+            line-height: 1.5em;
+            letter-spacing: -0.0125em;
+            color: #ffffff;
+        }
+
+        .success-got-it-button:hover {
+            background-color: #1a2a20;
+            transform: translateY(-1px);
+        }
+
+        .success-got-it-button:active {
+            transform: translateY(0);
+        }
+
+        @media screen and (max-width: 768px) {
+            .success-popup-modal {
+                width: 93vw;
+                max-width: 550px;
+                border-radius: 20px;
+            }
+
+            .success-popup-content {
+                padding: 24px 32px;
+                gap: 24px;
+            }
+
+            .success-subtitle {
+                font-size: 15px;
+                line-height: 1.5em;
+            }
+
+            .success-got-it-button {
+                width: 100%;
+                max-width: 300px;
+            }
+        }
+
+        @media screen and (max-width: 480px) {
+            .success-popup-content {
+                padding: 24px 24px;
+                gap: 24px;
+            }
+
+            .success-subtitle {
+                font-size: 14px;
+                line-height: 1.5em;
+            }
+
+            .success-got-it-button {
+                font-size: 16px;
+            }
+        }
+</style>
+
+<meta property="og:url" content="https://www.brightmoney.co/legal/bright-not-a-bank"> 
+
+<meta name=“robots” content=“noindex”></head><body><div><div id="pop-up" class="pop-up-appstore2"><div class="div-block-1200 pop-up"><p class="paragraph-169">You are now leaving the Bright website and entering a third-party website. Bright has no control over the content, products or services offered nor the security or privacy of information transmitted to others via their website. We recommend that you review the privacy policy of the site you are entering. Bright does not guarantee or endorse the products, information, or recommendations provided on any third-party website.</p><div class="pop-up-cta-housing"><a data-w-id="d65b09ad-ace6-127f-43ea-ada88628aeaa" href="https://brightmoney.sng.link/Cu8kf/ohq6/lbbx" target="_blank" class="button-appstore-2 w-button">Okay</a><a data-w-id="d65b09ad-ace6-127f-43ea-ada88628aeac" href="#" class="button-appstore-2 secondary w-button">Close</a></div></div></div><div id="pop-up" class="pop-up-playtore"><div class="div-block-1201 pop-up"><p class="paragraph-170">You are now leaving the Bright website and entering a third-party website. Bright has no control over the content, products or services offered nor the security or privacy of information transmitted to others via their website. We recommend that you review the privacy policy of the site you are entering. Bright does not guarantee or endorse the products, information, or recommendations provided on any third-party website.</p><div class="pop-up-cta-housing"><a data-w-id="7e4ba5b9-8377-f908-d5d8-fa28ece74d31" href="https://play.google.com/store/apps/details?id=com.brightcapital.app&amp;referrer=singular_click_id%3De5635070-22a7-4589-a727-273b260d0dd2&amp;pli=1" target="_blank" class="button-playstore w-button">Okay</a><a data-w-id="7e4ba5b9-8377-f908-d5d8-fa28ece74d33" href="#" class="button-playstore secondary w-button">Close</a></div></div></div></div><div data-animation="default" data-collapse="medium" data-duration="400" data-easing="ease" data-easing2="ease" role="banner" class="nav w-nav"><div class="html-embed---bg-blur w-embed"><style>
+	.nav {
+  -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px);
+  }
+</style></div><div class="main-container nav-bar"><div class="div-housing-nav"><div class="div-nav-bright-logo-main"><a href="/old-home" class="brand-2 navbar1 w-nav-brand"><img src="https://cdn.prod.website-files.com/68c3e3a7caa06b74af6898c6/68c3e3a7caa06b74af68997e_Bright%20Primary%20Horizontal%20-%20Dark.svg" loading="lazy" alt="Bright Money App logo"/></a><a data-w-id="057e38e6-9956-4988-cc0d-a08f696ff3be" href="#" class="link-block _12px change email-get-started tracked-cta navbar1 button-event w-inline-block"><div class="text-block-3 white black primary-120">Get started</div><div class="div-block-12"><img src="https://cdn.prod.website-files.com/68c3e3a7caa06b74af6898c6/68c3e3a7caa06b74af689981_right%20arrow.svg" loading="lazy" alt="" width="24" class="arrow change black"/></div><div class="div-green-arrow"></div></a></div><nav role="navigation" class="nav-menu-2 w-nav-menu"><div class="main-container nav-bar-change"><div data-hover="false" data-delay="0" data-w-id="057e38e6-9956-4988-cc0d-a08f696ff3c6" class="dropdown-7 w-dropdown"><div class="dropdown-toggle-2 w-dropdown-toggle"><div class="icon-2 w-icon-dropdown-toggle"></div><div class="text-block-8">Our Products</div></div><nav class="dropdown-list-main w-dropdown-list"><a data-w-id="057e38e6-9956-4988-cc0d-a08f696ff3cc" href="/product/bright-credit" class="div-block-928 hidefornow hidepls w-inline-block"><div class="dropdown-link-1">Bright Credit</div><div class="div-block-927"></div></a><a data-w-id="057e38e6-9956-4988-cc0d-a08f696ff3d0" href="/product/bright-builder" class="div-block-928 w-inline-block"><div class="dropdown-link-1">Bright Builder</div><div class="div-block-927"></div></a><a data-w-id="057e38e6-9956-4988-cc0d-a08f696ff3d4" href="/product/bright-plan" class="div-block-928 w-inline-block"><div class="dropdown-link-1">Bright Plan</div><div class="div-block-927"></div></a><a data-w-id="097aef49-f292-e9ba-d1e2-cde50b01232f" href="/product/smart-round-ups" class="div-block-928 w-inline-block"><div class="dropdown-link-1">Smart Round-Ups</div><div class="div-block-927"></div></a><a data-w-id="5939037d-a46b-970a-b9c8-11a47de93a15" href="/product/rent-reporting" class="div-block-928 w-inline-block"><div class="dropdown-link-1">Rent Reporting</div><div class="div-block-927"></div></a><a data-w-id="9b2d67dd-a3f3-68bd-3a83-af728ef21fce" href="/product/personal-loans" class="div-block-928 w-inline-block"><div class="dropdown-link-1">Personal Loans</div><div class="div-block-927"></div></a><a data-w-id="2e67fbee-1f9d-0ee1-6816-45036d97797f" href="/product/cash-advance" class="div-block-928 w-inline-block"><div class="dropdown-link-1">Cash Advance</div><div class="div-block-927"></div></a></nav></div><a href="/product/bright-plan" class="pricing-nav-link hidefornow w-nav-link">Products</a><a href="/internal-careers" id="div-india" class="pricing-nav-link current div-india hide-for-now w-nav-link">Careers</a><div data-hover="false" data-delay="0" data-w-id="057e38e6-9956-4988-cc0d-a08f696ff3dc" class="dropdown-8 w-dropdown"><div class="dropdown-toggle w-dropdown-toggle"><div class="icon-2 w-icon-dropdown-toggle"></div><div class="text-block-8">Resources</div></div><nav class="dropdown-list-main w-dropdown-list"><a data-w-id="057e38e6-9956-4988-cc0d-a08f696ff3e2" href="/categories/all-posts" class="div-block-928 w-inline-block"><div class="dropdown-link-1">Learn</div><div class="div-block-927"></div></a><a data-w-id="832ebfe0-6cc1-dd96-54c6-24186df9492a" href="/calculators-old/loan-repayment-calculator" class="div-block-928 w-inline-block"><div class="dropdown-link-1">Calculators</div><div class="div-block-927"></div></a><a data-w-id="057e38e6-9956-4988-cc0d-a08f696ff3ea" href="https://www.brightmoney.co/credit-cards/pnc" class="div-block-928 w-inline-block"><div class="dropdown-link-1">Credit Cards</div><div class="div-block-927"></div></a><a id="div-india" data-w-id="87cc0e6a-768c-8bb9-7a8a-d28479c35a57" href="https://careers.kula.ai/brightmoney" target="_blank" class="div-block-928 hidefornow w-inline-block"><div class="dropdown-link-1">Careers</div><div class="div-block-927"></div></a><a data-w-id="057e38e6-9956-4988-cc0d-a08f696ff3ee" href="/help" class="div-block-928 w-inline-block"><div class="dropdown-link-1">FAQs</div><div class="div-block-927"></div></a></nav></div><a data-w-id="057e38e6-9956-4988-cc0d-a08f696ff3f2" href="#" class="link-block-2 button-event hide-on-mobil w-inline-block"><div class="div-block-24"><div class="text-block-9">Get Started</div><div class="div-block-23"></div><div class="div-green-arrow-2"></div></div></a></div></nav><div data-w-id="057e38e6-9956-4988-cc0d-a08f696ff3f8" class="menu-button-2 w-nav-button"><div class="icon-17 w-icon-nav-menu"></div><img src="https://cdn.prod.website-files.com/68c3e3a7caa06b74af6898c6/68c3e3a7caa06b74af689a63_Hamburger%20Menu%20Icon.svg" loading="lazy" alt="" class="image-hamburger"/><img src="https://cdn.prod.website-files.com/68c3e3a7caa06b74af6898c6/68c3e3a7caa06b74af689a4e_Hamburger%20Menu%20Icon%20close.svg" loading="lazy" alt="" class="image-hamburger-close-icon"/></div></div></div></div><div class="div-housing-social-pop-ups"><div id="pop-up" class="pop-up-facebook"><div class="div-block-1131 pop-up"><p class="paragraph-89">You are now leaving the Bright website and entering a third-party website. Bright has no control over the content, products or services offered nor the security or privacy of information transmitted to others via their website. We recommend that you review the privacy policy of the site you are entering. Bright does not guarantee or endorse the products, information, or recommendations provided on any third-party website.</p><div class="pop-up-cta-housing"><a data-w-id="fb37dae3-5c38-126b-0395-f241c6a88d05" href="https://www.facebook.com/BrightMoneyApp/?ref=aymt_homepage_panel" target="_blank" class="button-facebook w-button">Okay</a><a data-w-id="fb37dae3-5c38-126b-0395-f241c6a88d07" href="#" class="button-facebook secondary w-button">Close</a></div></div></div><div id="pop-up" class="pop-up-linkd-in"><div class="div-block-1133 pop-up"><p class="paragraph-91">You are now leaving the Bright website and entering a third-party website. Bright has no control over the content, products or services offered nor the security or privacy of information transmitted to others via their website. We recommend that you review the privacy policy of the site you are entering. Bright does not guarantee or endorse the products, information, or recommendations provided on any third-party website.</p><div class="pop-up-cta-housing"><a data-w-id="49805973-aa2b-edbd-5734-7afaf2a51bf0" href="https://www.linkedin.com/company/bright-money/about/" target="_blank" class="button-linkedin-2 w-button">Okay</a><a data-w-id="49805973-aa2b-edbd-5734-7afaf2a51bf2" href="#" class="button-linkedin-2 secondary w-button">Close</a></div></div></div><div id="pop-up" class="pop-up-instagram"><div class="div-block-1134 pop-up"><p class="paragraph-92">You are now leaving the Bright website and entering a third-party website. Bright has no control over the content, products or services offered nor the security or privacy of information transmitted to others via their website. We recommend that you review the privacy policy of the site you are entering. Bright does not guarantee or endorse the products, information, or recommendations provided on any third-party website.</p><div class="pop-up-cta-housing"><a data-w-id="5380e384-8edc-f342-aafc-6f9facc2180c" href="https://www.instagram.com/brightmoney.co/" target="_blank" class="button-linkedin-2 instagram w-button">Okay</a><a data-w-id="5380e384-8edc-f342-aafc-6f9facc2180e" href="#" class="button-linkedin-2 secondary w-button">Close</a></div></div></div><div id="pop-up" class="appstore-pop-up"><div class="div-block-1135 pop-up"><p class="paragraph-93">You are now leaving the Bright website and entering a third-party website. Bright has no control over the content, products or services offered nor the security or privacy of information transmitted to others via their website. We recommend that you review the privacy policy of the site you are entering. Bright does not guarantee or endorse the products, information, or recommendations provided on any third-party website.</p><div class="pop-up-cta-housing"><a data-w-id="7abac045-627e-1565-91e9-767764f072b4" href="https://www.tiktok.com/@brightmoneyapp" target="_blank" class="button-tiktok w-button">Okay</a><a data-w-id="7abac045-627e-1565-91e9-767764f072b6" href="#" class="button-tiktok secondary w-button">Close</a></div></div></div></div><div class="spacer-section top-half"><div class="main-container"><div class="div-block-830"></div></div></div><div><div class="section-ach chyange"><div class="div-container-homepage-fold-1"><div class="div-block-ach"><h1 class="heading-legal-big-header _333"><strong>Is Bright Capital a bank?</strong></h1><p class="paragraph-legal">Bright is a consumer fintech platform that supports the management and improvement of individual credit and money needs. It offers tools such as Bright Builder loans, rent and utility reporting to build payment history, and debt management plans. It is also a marketplace that provides access to personal loans and cash advances through trusted partner providers, along with an AI-based assistant to support informed financial decisions.<br/><br/>Secured revolving lines of credit (“Bright Builder”) are made by Bright Capital Inc., NMLS #2410428, subject to state residency. Bright currently does not offer unsecured lines of credit (“Bright Credit”) to new customers. Personal loan offers are made through Bright’s Network Partners (<a href="/legal/network-partners">https://www.brightmoney.co/legal/network-partners</a>), who will determine if you are eligible for a loan offer independent of Bright. Evolve Bank &amp; Trust, Member FDIC, provides deposit accounts. FDIC insurance will only cover the failure of Evolve Bank &amp; Trust. Learn more <a href="https://www.fdic.gov/resources/deposit-insurance" target="_blank">here.</a><br/><br/>Bright Money (NMLS #2410428) holds the following state licenses and registrations (<a href="/legal/state-licenses-and-consumer-information/licenses-in-states">https://www.brightmoney.co/legal/state-licenses-and-consumer-information/licenses-in-state</a>) and does business under the following DBAs (<a href="/legal/state-licenses-and-consumer-information/doing-business-as-dba">https://www.brightmoney.co/legal/state-licenses-and-consumer-information/doing-business-as-dba</a>). Bright Money is a financial technology company, not a bank.<br/><br/>Bright Money is not FDIC-insured but works with the following FDIC-insured institutions:<br/><br/><strong>Evolve Bank &amp; Trust<br/></strong>Evolve Bank &amp; Trust, a member of the FDIC, is a financial institution that partners with Bright Capital Inc. to offer deposit accounts and other financial products.Evolve Bank &amp; Trust provides FDIC-insured checking and savings accounts, as well as other financial services available through Bright Capital Inc. Bright Capital Inc. is not a bank, but works in partnership with Evolve Bank &amp; Trust to provide these services.<br/><br/><strong>Continental Bank<br/></strong>Continental Bank, a Utah state-chartered commercial bank and a member of the FDIC, partners with Bright Capital Inc. Continental Bank is responsible for issuing associated products and ensuring compliance with regulatory requirements. Deposit accounts provided by Continental Bank are FDIC-insured, offering secure banking services through its partnership with Bright Capital Inc.<br/><br/><strong>CBW Bank<br/></strong>CBW Bank, a Kansas state-chartered bank and a member of the FDIC, offers a range of banking services, including lines of credit. Bright Capital Inc. collaborates with CBW Bank to provide loan origination and other services to customers, with CBW Bank maintaining full regulatory responsibility for its offerings.<br/></p></div></div></div></div><div class="spacer-bottom"><div class="main-container"><div class="div-block-830 bottom"></div></div></div><footer id="footer" class="primary-footer-standard"><div><div id="pop-up" class="pop-up-appstore2"><div class="div-block-1200 pop-up"><p class="paragraph-169">You are now leaving the Bright website and entering a third-party website. Bright has no control over the content, products or services offered nor the security or privacy of information transmitted to others via their website. We recommend that you review the privacy policy of the site you are entering. Bright does not guarantee or endorse the products, information, or recommendations provided on any third-party website.</p><div class="pop-up-cta-housing"><a data-w-id="d65b09ad-ace6-127f-43ea-ada88628aeaa" href="https://brightmoney.sng.link/Cu8kf/ohq6/lbbx" target="_blank" class="button-appstore-2 w-button">Okay</a><a data-w-id="d65b09ad-ace6-127f-43ea-ada88628aeac" href="#" class="button-appstore-2 secondary w-button">Close</a></div></div></div><div id="pop-up" class="pop-up-playtore"><div class="div-block-1201 pop-up"><p class="paragraph-170">You are now leaving the Bright website and entering a third-party website. Bright has no control over the content, products or services offered nor the security or privacy of information transmitted to others via their website. We recommend that you review the privacy policy of the site you are entering. Bright does not guarantee or endorse the products, information, or recommendations provided on any third-party website.</p><div class="pop-up-cta-housing"><a data-w-id="7e4ba5b9-8377-f908-d5d8-fa28ece74d31" href="https://play.google.com/store/apps/details?id=com.brightcapital.app&amp;referrer=singular_click_id%3De5635070-22a7-4589-a727-273b260d0dd2&amp;pli=1" target="_blank" class="button-playstore w-button">Okay</a><a data-w-id="7e4ba5b9-8377-f908-d5d8-fa28ece74d33" href="#" class="button-playstore secondary w-button">Close</a></div></div></div><div id="pop-up" class="pop-up-facebook"><div class="div-block-1131 pop-up"><p class="paragraph-89">You are now leaving the Bright website and entering a third-party website. Bright has no control over the content, products or services offered nor the security or privacy of information transmitted to others via their website. We recommend that you review the privacy policy of the site you are entering. Bright does not guarantee or endorse the products, information, or recommendations provided on any third-party website.</p><div class="pop-up-cta-housing"><a data-w-id="fb37dae3-5c38-126b-0395-f241c6a88d05" href="https://www.facebook.com/BrightMoneyApp/?ref=aymt_homepage_panel" target="_blank" class="button-facebook w-button">Okay</a><a data-w-id="fb37dae3-5c38-126b-0395-f241c6a88d07" href="#" class="button-facebook secondary w-button">Close</a></div></div></div><div id="pop-up" class="pop-up-linkd-in"><div class="div-block-1133 pop-up"><p class="paragraph-91">You are now leaving the Bright website and entering a third-party website. Bright has no control over the content, products or services offered nor the security or privacy of information transmitted to others via their website. We recommend that you review the privacy policy of the site you are entering. Bright does not guarantee or endorse the products, information, or recommendations provided on any third-party website.</p><div class="pop-up-cta-housing"><a data-w-id="49805973-aa2b-edbd-5734-7afaf2a51bf0" href="https://www.linkedin.com/company/bright-money/about/" target="_blank" class="button-linkedin-2 w-button">Okay</a><a data-w-id="49805973-aa2b-edbd-5734-7afaf2a51bf2" href="#" class="button-linkedin-2 secondary w-button">Close</a></div></div></div><div id="pop-up" class="pop-up-instagram"><div class="div-block-1134 pop-up"><p class="paragraph-92">You are now leaving the Bright website and entering a third-party website. Bright has no control over the content, products or services offered nor the security or privacy of information transmitted to others via their website. We recommend that you review the privacy policy of the site you are entering. Bright does not guarantee or endorse the products, information, or recommendations provided on any third-party website.</p><div class="pop-up-cta-housing"><a data-w-id="5380e384-8edc-f342-aafc-6f9facc2180c" href="https://www.instagram.com/brightmoney.co/" target="_blank" class="button-linkedin-2 instagram w-button">Okay</a><a data-w-id="5380e384-8edc-f342-aafc-6f9facc2180e" href="#" class="button-linkedin-2 secondary w-button">Close</a></div></div></div><div id="pop-up" class="appstore-pop-up"><div class="div-block-1135 pop-up"><p class="paragraph-93">You are now leaving the Bright website and entering a third-party website. Bright has no control over the content, products or services offered nor the security or privacy of information transmitted to others via their website. We recommend that you review the privacy policy of the site you are entering. Bright does not guarantee or endorse the products, information, or recommendations provided on any third-party website.</p><div class="pop-up-cta-housing"><a data-w-id="7abac045-627e-1565-91e9-767764f072b4" href="https://www.tiktok.com/@brightmoneyapp" target="_blank" class="button-tiktok w-button">Okay</a><a data-w-id="7abac045-627e-1565-91e9-767764f072b6" href="#" class="button-tiktok secondary w-button">Close</a></div></div></div></div><div class="main-container"><div class="footer-flex-container"><div id="w-node-_393bb6ba-b037-740b-cccc-e6fb96d69ae2-96d69adf" class="div-block-533"><div class="div-block-828"><a href="/old-home" class="footer-logo-link"><img src="https://cdn.prod.website-files.com/68c3e3a7caa06b74af6898c6/68c3e3a7caa06b74af6899d5_Bright%20Primary%20Horizontal%20-%20Dark.svg" width="62.5" alt="Bright-Money-logo" class="footer-image"/></a><div class="div-block-602 _32"><div><div class="text-12">ADDRESS</div></div><div class="text-block-488">Bright Capital Inc<br/>50 California St, <br/>Suite 1621<br/>San Francisco<br/>CA 94111</div></div><div class="div-block-829"><div class="parent-iosgoogleplay mobile"><a data-w-id="180fcf6a-f5ca-46bc-81d8-f98f469ccc3e" href="#" class="div-ios-app w-inline-block"></a><a data-w-id="180fcf6a-f5ca-46bc-81d8-f98f469ccc3f" href="#" class="div-google-play-icon w-inline-block"></a></div></div><div><div class="div-block-602 _32"><div><div class="text-12">E-MAIL</div></div><div class="text-block-488"><a href="mailto:support@brightmoney.co" class="link-white-footer">support@brightmoney.co</a></div></div><div class="div-block-602 _32"><div><div class="text-12">OPERATIONAL HOURS [Mon-Fri] - 9:30 TO 6:30 PM (CST)</div></div><div class="text-block-488"><a href="tel:+1877-274-6494" class="link-white-footer">+1 877-274-6494</a></div></div></div></div></div><div class="div-block-492"><h3 class="text-14">Our Products</h3><ul role="list" class="list-21 w-list-unstyled"><li class="list-item-7"><a href="/product/bright-credit" class="footer-link hidefornow">Credit Line</a><a href="/product/bright-builder" class="footer-link">Bright Builder</a></li><li><a href="/product/bright-plan" class="footer-link">Bright Plan</a></li><li><a href="#" class="footer-link hide-careers">Careers</a></li><li class="hide-press"><a href="#" class="footer-link">Press</a></li><li><a href="/product/smart-round-ups" class="footer-link">Smart Round-Ups</a></li><li><a href="/product/rent-reporting" class="footer-link">Rent Reporting</a></li><li><a href="/product/personal-loans" class="footer-link">Personal Loans</a></li><li><a href="/product/cash-advance" class="footer-link">Cash Advance</a></li></ul><div class="div-block-826 _62"></div></div><div class="div-block-534"><h3 class="text-14">Who we are</h3><ul role="list" class="list-20 w-list-unstyled"><li><a href="/about-us-old" class="footer-link soms hide">About us</a></li><li class="list-item-5"><a href="/newsroom-old" class="footer-link">Newsroom</a></li><li class="list-item-6 hidefornow-affliates"><a href="#" class="footer-link">Affiliates</a></li><li class="list-item-6"><a href="/contact-us-old" class="footer-link">Contact Us</a></li><li class="list-item-6"><a href="/categories/all-bright-posts" class="footer-link _10">Blog</a></li><li class="list-item-6 top10"><a href="/pricing-old" class="footer-link">Pricing</a></li></ul><div class="div-block-826 _62"></div></div><div class="div-block-489"><h3 class="text-14">Resources</h3><ul role="list" class="list-18 w-list-unstyled"><li><a href="/categories/all-posts" class="footer-link">Learn</a></li><li id="div-india" class="div-india"><a href="https://careers.kula.ai/brightmoney" target="_blank" class="footer-link">Careers</a></li><li><a href="https://www.brightmoney.co/credit-cards/pnc" class="footer-link">Credit Cards</a></li><li><a href="/help" class="footer-link _10">FAQs</a></li><li><a href="/calculators-old/loan-repayment-calculator" class="footer-link _10">Calculators</a></li></ul><div class="div-block-826 _62"></div></div><div id="w-node-_393bb6ba-b037-740b-cccc-e6fb96d69b33-96d69adf" class="div-block-493"><h3 class="text-14">Legal</h3><ul role="list" class="list-18 w-list-unstyled"><li><a href="/legal/privacy-policy" class="footer-link">Privacy Policy</a></li><li><a href="/legal/your-privacy-choices" class="footer-link">Your Privacy Choices</a></li><li><a href="/legal/terms-of-use" class="footer-link">Terms of Use</a></li><li><a href="/legal/disclosures" class="footer-link">Disclosure</a></li><li><a href="/legal/state-licenses-and-consumer-information/doing-business-as-dba" class="footer-link _10">State Licenses and Consumer Information</a></li><li><a href="/legal/network-partners" class="footer-link _10">Network Partners</a></li></ul></div></div><div class="div-block-825"><div class="parent-iosgoogleplay hide"><a data-utm_content="footer_appstore" data-w-id="393bb6ba-b037-740b-cccc-e6fb96d69b42" href="#" class="div-ios-app tracked-cta download-app-cta w-inline-block"></a><a data-w-id="393bb6ba-b037-740b-cccc-e6fb96d69b43" href="#" class="div-google-play-icon tracked-cta download-app-cta w-inline-block"></a></div><div class="div-parent-social-icons"><a data-w-id="393bb6ba-b037-740b-cccc-e6fb96d69b45" href="#" class="div-social-icons facebook w-inline-block"></a><a data-w-id="393bb6ba-b037-740b-cccc-e6fb96d69b46" href="#" class="div-social-icons linkedin w-inline-block"></a><a data-w-id="393bb6ba-b037-740b-cccc-e6fb96d69b47" href="#" class="div-social-icons instagram w-inline-block"></a><a data-w-id="393bb6ba-b037-740b-cccc-e6fb96d69b49" href="#" class="div-social-icons tiktok w-inline-block"></a></div></div><div class="div-block-826"></div><div class="div-parent-compliance"><div class="div-bright-capital"><div class="text-block-566">2026 Bright Capital Inc.</div><div class="text-block-567">Secured revolving lines of credit (“Bright Builder”) are made by Bright Capital Inc., NMLS (2410428) only, <a href="/help/bright-builders-about-and-benefits" class="link-footer">subject to state residency.</a> Bright currently does not offer Unsecured Lines of Credit (“Bright Credit”) to new customers. Personal loan offers are available through Bright Money’s <a href="/legal/network-partners" class="link-footer">Network Partners,</a> subject to credit approval and applicable state restrictions. Loan amounts and terms vary. Deposit accounts are provided by Evolve Bank &amp; Trust and <strong>Continental Bank, Members FDIC. FDIC insurance will only cover the failure of Evolve Bank &amp; Trust and Continental Bank, Members FDIC</strong>. Learn more <a href="https://www.fdic.gov/resources/deposit-insurance/" target="_blank" class="footer-hyperlink">here</a>. <a href="/legal/bright-not-a-bank" aria-current="page" class="footer-hyperlink w--current">Bright is a financial technology company, not a bank. </a>‍<br/></div><div class="text-block-568 top1">When you join Bright and if you choose to start a Premium Membership you will be charged a recurring fee of $14 per month, $39 for a three-month term, $68 for a six-month term or $97 for an annual term. Your Premium Membership will auto-renew until you cancel membership. Cancel anytime. See <a href="/legal/terms-of-use" target="_blank" class="link-59">Membership Terms and Conditions.</a> Bright Premium Membership is not required for Bright Builder or Personal Loan offers.</div></div><div class="div-bright-capital"><div class="text-block-567 light">Each individual’s credit situation is unique and influenced by a variety of factors. The way these factors interact and impact a person’s credit score may vary. Bright Capital, Inc. strives to provide accurate and up-to-date information. However, we cannot guarantee the completeness and correctness of the content provided. This page is intended for informational purposes only and does not constitute financial or legal advice, nor does it imply an endorsement of any third-party products or services. All products and services are presented without warranty. Bright Capital, Inc. does not offer financial, legal, or tax advice. We strongly recommend consulting with your own financial, legal, or tax advisors for guidance specific to your situation.<br/></div></div><div class="div-compliance-contents hidefornownocompliance"><div class="text-block-568">1. When you check your rates for Bright Credit we initiate a “soft pull” of your credit. This will NOT impact your credit score. If you’re approved and activate Bright Credit we may do a hard inquiry which may affect you credit score.<br/><br/>2. Bright Credit is a line of credit that can be used to pay off your credit cards. Subject to credit approval. Variable APR range from 9% –24.99%, Credit Limit ranges from $500 - $8,000. APR will vary based on prime rates.  Final terms may vary depending on credit review. Monthly Minimum Payments are as low as 3% of the outstanding principle balance plus the accrued interest. Also, you can choose to pay more than the minimum due if you want to pay down the loan faster. Credit line originated by Bright or CBW Bank, Member FDIC. Products and services subject to state residency and regulatory requirements. Bright Credit is currently not available in all states.<br/><br/>3. Bright customers paid off their credit card debt 4x faster using Bright membership than they would by only paying their minimum dues. These customers included all users using Bright before Feb 2023, having a minimum of $500 credit card debt and having used Bright services for 1 year. Actual pay off rates may defer based on individuals.<br/><br/>4. Payment history has the biggest impact on credit score accounting for 40% of how score is calculated per TransUnion (<a href="https://www.transunion.com/credit-score" target="_blank" class="link-white">https://www.transunion.com/credit-score</a>). Bright Builder helps you build payment history that may positively improve your credit score. Credit score increase is not guaranteed. Individual results may vary. Late payments, missed payments, or other defaults on your accounts with us or others will have a negative effect on your credit score. Products and services subject to state residency and regulatory requirements. Bright Builder is currently not available in all states.<br/>‍<br/>5. Bright reports payment history to 2 major credit bureaus, Equifax and TransUnion.<br/><br/>6. Bright uses standard industry practices to determine our customer satisfaction score. It&#x27;s a metric used in all kinds of businesses to measure customer service and product quality. Businesses calculate their score by taking the number of satisfied customers (those who rated them 5 or higher) and dividing it by the total number of responses. As of November 2021, Bright&#x27;s score of 93 out of 100 represents ratings provided by over 5,000 Bright users.<br/><br/>7. Users who make on time payments and are in good standing may be evaluated for credit limit increases (limit changes are subject to credit underwriting and approval). Evaluation and credit limit increases are not guaranteed.<br/><br/>8. Applicable when a user chooses annual or semi-annual plans.<br/><br/>* Based on Apple Appstore and Google Play store ratings as on May 2023.<br/><br/>The product images shown are for illustration purposes only..</div></div></div></div></footer><script src="https://d3e54v103j8qbb.cloudfront.net/js/jquery-3.5.1.min.dc5e7f18c8.js?site=68c3e3a7caa06b74af6898c6" type="text/javascript" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script><script src="https://cdn.prod.website-files.com/68c3e3a7caa06b74af6898c6/js/webflow.schunk.36b8fb49256177c8.js" type="text/javascript" integrity="sha384-4abIlA5/v7XaW1HMXKBgnUuhnjBYJ/Z9C1OSg4OhmVw9O3QeHJ/qJqFBERCDPv7G" crossorigin="anonymous"></script><script src="https://cdn.prod.website-files.com/68c3e3a7caa06b74af6898c6/js/webflow.schunk.5269e5a4702610b7.js" type="text/javascript" integrity="sha384-aw4IB40RMZgRIJP5/uJyVEGLxMjKJ4SgNg3guxI6JAnDGAoWvNaDWdjE/aDLQwn9" crossorigin="anonymous"></script><script src="https://cdn.prod.website-files.com/68c3e3a7caa06b74af6898c6/js/webflow.f3b5b9b7.2e0e520fe292f3a3.js" type="text/javascript" integrity="sha384-6ewG5PNJN6D9eTgdhHOU3R0izzI1Nxf0/bfTiiz8clwpqKcukqPawNSyl3npeFdY" crossorigin="anonymous"></script><!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-T7STBTWQ"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+
+
+
+
+<script>
+	try {
+		$.ajax({
+      url: 'https://ipinfo.io?token=9f8e9f81269a6b',
+      type: 'GET',
+      dataType : "jsonp",
+      success: function (response) {
+        console.log(response);
+        /*if (response.country !== 'IN') $('.div-india').css('display', 'none');
+        else $('.div-us').css('display', 'none');*/
+      },
+      error: function (err) {
+        console.log('Error: ', err);
+        /*$('.div-india').css('display', 'none');*/
+      },
+    });
+  } catch (err) {
+  	console.log('HERE');
+  	/*$('.div-india').css('display', 'none');*/
+    console.log(err);
+  }
+</script>
+
+<script>
+$(".span-wrapper").each(function (index) {
+  let relatedEl = $(".span-element").eq(index);
+	relatedEl.appendTo($(this));
+});
+</script>
+
+<script defer>
+setTimeout(()=>{
+    function initFreshChat() {
+        window.fcWidget.init({
+            token: "62f23c5a-4c36-4d31-a408-cfe03600210b",
+            host: "https://wchat.freshchat.com"
+        });
+    }
+    function initialize(i, t) {
+        var e;
+        i.getElementById(t) ? initFreshChat() : ((e = i.createElement("script")).id = t,
+        e.async = !0,
+        e.src = "https://wchat.freshchat.com/js/widget.js",
+        e.onload = initFreshChat,
+        i.head.appendChild(e))
+    }
+    (function initiateCall() {
+        initialize(document, "Freshdesk Messaging-js-sdk")
+    })();
+    //window.addEventListener ? window.addEventListener("load", initiateCall, !1) : window.attachEvent("load", initiateCall, !1);
+    $('#chat-button').click(function() {
+        console.log("Chat button is clicked");
+        window.fcWidget.open();
+    });
+},5000);
+</script>
+
+<script>
+    function toggleMobileSection(element) {
+      const section = element.parentElement;
+      if (section) {
+        section.classList.toggle("expanded");
+      }
+    }
+  
+    function toggleDropdown(event, dropdownType) {
+      event.preventDefault();
+      event.stopPropagation();
+  
+      const headerContainer = document.querySelector(
+        ".hero-section-header-desktop"
+      );
+      const productsDropdown = document.getElementById(
+        "products-dropdown-content"
+      );
+      const resourcesDropdown = document.getElementById(
+        "resources-dropdown-content"
+      );
+      const productsArrow = document.getElementById("products-arrow");
+      const resourcesArrow = document.getElementById("resources-arrow");
+  
+      const activeDropdown =
+        dropdownType === "products" ? productsDropdown : resourcesDropdown;
+      const isAlreadyActive = activeDropdown.classList.contains("active");
+  
+      headerContainer.classList.remove("dropdown-expanded");
+      productsDropdown.classList.remove("active");
+      resourcesDropdown.classList.remove("active");
+      productsArrow.classList.remove("arrow-up");
+      resourcesArrow.classList.remove("arrow-up");
+      if (!isAlreadyActive) {
+        headerContainer.classList.add("dropdown-expanded");
+        activeDropdown.classList.add("active");
+        const activeArrow =
+          dropdownType === "products" ? productsArrow : resourcesArrow;
+        activeArrow.classList.add("arrow-up");
+      }
+    }
+  
+    function toggleMobileMenu() {
+      const headerContainer = document.querySelector(
+        ".hero-section-header-desktop"
+      );
+      const isExpanded = headerContainer.classList.contains("mobile-expanded");
+  
+      if (isExpanded) {
+        headerContainer.classList.remove("mobile-expanded");
+        const mobileNavItems = document.querySelectorAll(".mobile-nav-item");
+        mobileNavItems.forEach((item) => {
+          item.classList.remove("expanded");
+        });
+      } else {
+        headerContainer.classList.add("mobile-expanded");
+      }
+    }
+  
+    function toggleMobileDropdown(element, dropdownType) {
+      const navItem = element.parentElement;
+      const isExpanded = navItem.classList.contains("expanded");
+  
+      const allMobileNavItems = document.querySelectorAll(".mobile-nav-item");
+      allMobileNavItems.forEach((item) => {
+        if (item !== navItem) {
+          item.classList.remove("expanded");
+        }
+      });
+  
+      if (isExpanded) {
+        navItem.classList.remove("expanded");
+      } else {
+        navItem.classList.add("expanded");
+      }
+    }
+  
+    document.addEventListener("click", function (event) {
+      const headerContainer = document.querySelector(
+        ".hero-section-header-desktop"
+      );
+  
+      if (headerContainer && !headerContainer.contains(event.target)) {
+        const productsDropdown = document.getElementById(
+          "products-dropdown-content"
+        );
+        const resourcesDropdown = document.getElementById(
+          "resources-dropdown-content"
+        );
+        const productsArrow = document.getElementById("products-arrow");
+        const resourcesArrow = document.getElementById("resources-arrow");
+  
+        headerContainer.classList.remove("dropdown-expanded");
+        headerContainer.classList.remove("mobile-expanded");
+  
+        if (productsDropdown) productsDropdown.classList.remove("active");
+        if (resourcesDropdown) resourcesDropdown.classList.remove("active");
+  
+        if (productsArrow) productsArrow.classList.remove("arrow-up");
+        if (resourcesArrow) resourcesArrow.classList.remove("arrow-up");
+  
+        const mobileNavItems = document.querySelectorAll(".mobile-nav-item");
+        mobileNavItems.forEach((item) => {
+          item.classList.remove("expanded");
+        });
+      }
+    });
+  </script>
+
+
+<!-- Success Popup Modal -->
+      <div class="success-popup-backdrop" id="externalLinkPopupBackdrop" style="display: none;">
+          <div class="success-popup-modal" id="externalLinkPopupModal">
+              <div class="success-popup-content">
+                  <div class="success-text-content">
+                      <p class="success-subtitle">You are now leaving the Bright website and entering a third-party website. Bright has no control over the content, products, or services offered, nor the security or privacy of information transmitted to others via their website. We recommend that you review the privacy policy of the site you are entering. Bright does not guarantee or endorse the products, information, or recommendations provided on any third-party website.</p>
+                  </div>
+                  <div class="success-button-container">
+                      <button class="success-got-it-button" id="externalLinkGotItButton" type="button">
+                          Okay
+                      </button>
+                  </div>
+              </div>
+          </div>
+      </div>
+
+      <script>
+      document.addEventListener('DOMContentLoaded', function() {
+          // UPDATED IDs HERE
+    const successPopupBackdrop = document.getElementById('externalLinkPopupBackdrop');
+    const successGotItButton = document.getElementById('externalLinkGotItButton');
+          let pendingUrl = null;
+          let pendingTarget = null;
+
+          // Function to check if a URL is external (not brightmoney domain)
+          function isExternalLink(url) {
+              if (!url) return false;
+              
+              // Handle relative URLs and anchors
+              if (url.startsWith('#') || url.startsWith('/') || url.startsWith('?')) {
+                  return false;
+              }
+              
+              // Handle mailto and tel links
+              if (url.startsWith('mailto:') || url.startsWith('tel:')) {
+                  return false;
+              }
+              
+              try {
+                  const urlObj = new URL(url, window.location.href);
+                  const hostname = urlObj.hostname.toLowerCase();
+                  
+                  // Check if it's a brightmoney domain (brightmoney.co, app.brightmoney.co, www.brightmoney.co)
+                  const brightmoneyDomains = [
+                      'brightmoney.co',
+                      'www.brightmoney.co',
+                      'app.brightmoney.co'
+                  ];
+                  
+                  return !brightmoneyDomains.some(domain => hostname === domain || hostname.endsWith('.' + domain));
+              } catch (e) {
+                  // If URL parsing fails, assume it's not external
+                  return false;
+              }
+          }
+
+          function showSuccessPopup(url, target) {
+              pendingUrl = url;
+              pendingTarget = target || '_blank';
+              successPopupBackdrop.style.display = 'flex';
+              document.body.style.overflow = 'hidden';
+              
+              setTimeout(() => {
+                  successPopupBackdrop.classList.add('active');
+              }, 10);
+          }
+
+          function closeSuccessPopup(shouldNavigate) {
+              successPopupBackdrop.classList.remove('active');
+              document.body.style.overflow = '';
+              
+              setTimeout(() => {
+                  successPopupBackdrop.style.display = 'none';
+                  // Navigate to the external link only if user clicked "Okay"
+                  if (shouldNavigate && pendingUrl) {
+                      if (pendingTarget === '_blank') {
+                          window.open(pendingUrl, '_blank');
+                      } else {
+                          window.location.href = pendingUrl;
+                      }
+                  }
+                  // Clear pending URL and target
+                  pendingUrl = null;
+                  pendingTarget = null;
+              }, 300);
+          }
+
+          // Function to check if element is inside a form or is form-related
+          function isFormRelated(element) {
+              // Check if element is inside a form
+              let parent = element.parentElement;
+              while (parent) {
+                  if (parent.tagName === 'FORM') {
+                      return true;
+                  }
+                  parent = parent.parentElement;
+              }
+              
+              // Check for form-related classes or attributes
+              const formClasses = ['submit-button', 'form-button', 'contact-form-button'];
+              const hasFormClass = formClasses.some(cls => element.classList.contains(cls));
+              
+              // Check if it's a button that submits a form
+              if (element.tagName === 'BUTTON' && (element.type === 'submit' || element.getAttribute('type') === 'submit')) {
+                  return true;
+              }
+              
+              return hasFormClass;
+          }
+
+          // Add click handlers to all external links
+          const allLinks = document.querySelectorAll('a[href]');
+          allLinks.forEach(function(link) {
+              const href = link.getAttribute('href');
+              
+              // Skip form-related links
+              if (isFormRelated(link)) {
+                  return;
+              }
+            
+            // Skip the "Explore Open Positions" button
+              if (link.classList.contains('explore-positions-btn')) {
+                  return;
+              }
+              
+              if (isExternalLink(href)) {
+                  link.addEventListener('click', function(e) {
+                      // Don't interfere if this is part of a form submission
+                      if (isFormRelated(this)) {
+                          return;
+                      }
+                      
+                      e.preventDefault();
+                      const url = this.getAttribute('href');
+                      const target = this.getAttribute('target') || '_blank';
+                      showSuccessPopup(url, target);
+                  });
+              }
+          });
+
+          // Handle success popup close - "Okay" button navigates to external link
+          successGotItButton.addEventListener('click', function() {
+              closeSuccessPopup(true);
+          });
+          
+          // Close popup when clicking backdrop - do NOT navigate, stay on same page
+          successPopupBackdrop.addEventListener('click', function(event) {
+              if (event.target === successPopupBackdrop) {
+                  closeSuccessPopup(false);
+              }
+          });
+          
+          // Close popup with Escape key - do NOT navigate, stay on same page
+          document.addEventListener('keydown', function(event) {
+              if (event.key === 'Escape' && successPopupBackdrop.classList.contains('active')) {
+                  closeSuccessPopup(false);
+              }
+          });
+      });
+      </script><script>
+  const page = 'Bright-not-a-bank';
+  const url = 'https://b.sng.link/Au8kf/fgxl/tpmh';
+  const LP_FLOW = '3';
+  const wsv = '3';
+  const skip_email = false;
+  const htmlElement = document.querySelector("html");
+  htmlElement.setAttribute("lang" ,"en");
+</script>
+
+<script src="https://static-assets.brightmoney.co/v10.js"></script>
+</body></html>

@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>About | Pallavi Jangid</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body class="about-page-static">
+  <p class="about-top-name">PALLAVI JANGID</p>
+
+  <main class="page about-shell-static">
+    <section class="about-grid-wrap">
+      <div class="about-grid-row">
+        <div class="about-cell"><img class="about-art photography" src="assets/about/Photography.png" alt="Photography" /></div>
+        <div class="about-cell"><img class="about-art nift" src="assets/about/NIFT.png" alt="NIFT" /></div>
+        <div class="about-cell"><img class="about-art typeface js-smart-gif" src="assets/about/Typeface.gif" data-gif="assets/about/Typeface.gif" data-png="assets/about/Typeface.png" alt="Typeface" /></div>
+      </div>
+      <div class="about-grid-row">
+        <div class="about-cell"><img class="about-art three-d" src="assets/about/3D.png" alt="3D" /></div>
+        <div class="about-cell about-copy">
+          <h1>PUN-LUVIN</h1>
+          <p>Design decisions</p>
+        </div>
+        <div class="about-cell"><img class="about-art graphic" src="assets/about/Graphic.png" alt="Graphic" /></div>
+      </div>
+      <div class="about-grid-row">
+        <div class="about-cell"><img class="about-art brand" src="assets/about/Brand.png" alt="Brand" /></div>
+        <div class="about-cell"><img class="about-art motion js-smart-gif" src="assets/about/Motion.gif" data-gif="assets/about/Motion.gif" data-png="assets/about/Motion.png" alt="Motion" /></div>
+        <div class="about-cell"><img class="about-art genai" src="assets/about/GenAI.png" alt="Gen AI" /></div>
+      </div>
+    </section>
+  </main>
+
+  <nav class="bottom-nav" aria-label="Main">
+    <a href="works.html">WORK</a>
+    <a href="play.html">PLAY</a>
+    <a href="about.html" class="active">ABOUT</a>
+    <div class="social">
+      <a href="https://www.linkedin.com/in/pallavi-jangid-117584179/" target="_blank" rel="noreferrer" aria-label="LinkedIn"><img src="assets/home/LinkedIn.png" alt="LinkedIn" /></a>
+      <a href="assets/home/PallaviJangid_Resume2026.pdf" target="_blank" rel="noreferrer" aria-label="Resume"><img src="assets/home/CV.png" alt="CV" /></a>
+    </div>
+  </nav>
+
+  <script>
+    (function () {
+      const timeoutMs = 2400;
+      document.querySelectorAll('.js-smart-gif').forEach((img) => {
+        const gifSrc = img.dataset.gif;
+        const pngSrc = img.dataset.png;
+        let done = false;
+        const probe = new Image();
+        const timer = setTimeout(() => {
+          if (!done) img.src = pngSrc;
+        }, timeoutMs);
+        probe.onload = function () { done = true; clearTimeout(timer); img.src = gifSrc; };
+        probe.onerror = function () { done = true; clearTimeout(timer); img.src = pngSrc; };
+        probe.src = gifSrc;
+      });
+    })();
+  </script>
+</body>
+</html>
