@@ -1,0 +1,292 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Home Layout Tuner</title>
+  <style>
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: "Roboto Mono", ui-monospace, SFMono-Regular, Menlo, monospace;
+      background: #f1f1f1;
+      color: #111;
+    }
+    .shell {
+      display: grid;
+      grid-template-columns: 380px 1fr;
+      min-height: 100vh;
+    }
+    .controls {
+      border-right: 1px solid #d5d5d5;
+      background: #fff;
+      padding: 14px;
+      overflow: auto;
+    }
+    .controls h1 {
+      margin: 0 0 10px;
+      font-size: 16px;
+    }
+    .controls p {
+      margin: 0 0 14px;
+      font-size: 12px;
+      line-height: 1.4;
+    }
+    .item {
+      border: 1px solid #e4e4e4;
+      border-radius: 8px;
+      padding: 8px;
+      margin-bottom: 8px;
+      background: #fafafa;
+    }
+    .item h2 {
+      margin: 0 0 6px;
+      font-size: 12px;
+      letter-spacing: .04em;
+    }
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 6px;
+    }
+    label {
+      font-size: 10px;
+      display: block;
+    }
+    input {
+      width: 100%;
+      margin-top: 2px;
+      border: 1px solid #c8c8c8;
+      border-radius: 4px;
+      padding: 4px;
+      font-family: inherit;
+      font-size: 11px;
+    }
+    .preview-area {
+      padding: 10px;
+      overflow: auto;
+    }
+    .preview-grid {
+      display: grid;
+      gap: 16px;
+    }
+    .stage {
+      background: #fff;
+      border: 1px solid #d9d9d9;
+      border-radius: 8px;
+      padding: 8px;
+    }
+    .stage h3 {
+      margin: 0 0 8px;
+      font-size: 12px;
+      font-weight: 500;
+    }
+    .canvas {
+      position: relative;
+      margin: 0 auto;
+      background: #f8f8f8;
+      overflow: hidden;
+      border: 1px dashed #d6d6d6;
+    }
+    .desktop-canvas { width: 1200px; aspect-ratio: 1512/982; max-width: 100%; }
+    .mobile-canvas { width: 390px; aspect-ratio: 390/760; max-width: 100%; }
+    .art {
+      position: absolute;
+      height: auto;
+      object-fit: contain;
+    }
+    .name {
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+      width: 100%;
+    }
+    .mobile-only { display: none; }
+    .actions {
+      position: sticky;
+      bottom: 0;
+      background: #fff;
+      padding-top: 8px;
+      border-top: 1px solid #eee;
+    }
+    button {
+      width: 100%;
+      border: 1px solid #111;
+      background: #fff;
+      padding: 8px;
+      border-radius: 6px;
+      cursor: pointer;
+      font-family: inherit;
+      font-size: 12px;
+    }
+    textarea {
+      width: 100%;
+      margin-top: 8px;
+      min-height: 220px;
+      border: 1px solid #c8c8c8;
+      border-radius: 6px;
+      padding: 8px;
+      font-family: ui-monospace, Menlo, monospace;
+      font-size: 11px;
+    }
+    @media (max-width: 1100px) {
+      .shell { grid-template-columns: 1fr; }
+      .controls { border-right: 0; border-bottom: 1px solid #d5d5d5; max-height: 48vh; }
+    }
+  </style>
+</head>
+<body>
+  <div class="shell">
+    <aside class="controls">
+      <h1>Home Layout Tuner</h1>
+      <p>Edit `%` positions and widths. Desktop controls affect `styles.css` base; mobile controls affect the `@media (max-width: 768px)` block.</p>
+      <div id="controls"></div>
+      <div class="actions">
+        <button id="exportBtn" type="button">Generate CSS Snippet</button>
+        <textarea id="output" placeholder="Generated CSS will appear here..."></textarea>
+      </div>
+    </aside>
+
+    <main class="preview-area">
+      <div class="preview-grid">
+        <section class="stage">
+          <h3>Desktop Preview</h3>
+          <div id="desktopCanvas" class="canvas desktop-canvas"></div>
+        </section>
+        <section class="stage">
+          <h3>Mobile Preview</h3>
+          <div id="mobileCanvas" class="canvas mobile-canvas"></div>
+        </section>
+      </div>
+    </main>
+  </div>
+
+  <script>
+    const items = [
+      { key: "36days", cls: "f-36days", src: "assets/home/36days.png", mobileOnly: false, desktop: { x: 12.2, y: 20.4, w: 15.9 }, mobile: { x: 7, y: 15, w: 41 } },
+      { key: "ads", cls: "f-ads", src: "assets/home/Ads.png", mobileOnly: false, desktop: { x: 7.6, y: 57.0, w: 15.9 }, mobile: { x: 5, y: 57, w: 36 } },
+      { key: "deck", cls: "f-deck", src: "assets/home/Deck.png", mobileOnly: false, desktop: { x: 50.0, y: 15.3, w: 19.8 }, mobile: { x: 52, y: 16, w: 41 } },
+      { key: "mobile", cls: "f-mobile", src: "assets/home/Mobile.png", mobileOnly: false, desktop: { x: 84.0, y: 23.4, w: 5.2 }, mobile: { x: 78, y: 39, w: 14 } },
+      { key: "lp", cls: "f-lp", src: "assets/home/LP.png", mobileOnly: false, desktop: { x: 78.7, y: 50.9, w: 11.8 }, mobile: { x: 57, y: 57, w: 31 } },
+      { key: "collab", cls: "f-collab", src: "assets/home/Collaboration.png", mobileOnly: false, desktop: { x: 50.0, y: 62.1, w: 16.8 }, mobile: { x: 49, y: 79, w: 43 } },
+      { key: "pal", cls: "f-pal", src: "assets/home/Pal (Top).png", mobileOnly: true, desktop: { x: 0, y: 0, w: 0 }, mobile: { x: 6, y: 2, w: 34 } },
+      { key: "lavi", cls: "f-lavi", src: "assets/home/Lavi (Bottom).png", mobileOnly: true, desktop: { x: 0, y: 0, w: 0 }, mobile: { x: 8, y: 84, w: 34 } }
+    ];
+
+    const controlsEl = document.getElementById("controls");
+    const desktopCanvas = document.getElementById("desktopCanvas");
+    const mobileCanvas = document.getElementById("mobileCanvas");
+    const outputEl = document.getElementById("output");
+
+    function createArt(canvas, src, cls) {
+      const img = document.createElement("img");
+      img.className = `art ${cls}`;
+      img.src = src;
+      img.alt = cls;
+      canvas.appendChild(img);
+      return img;
+    }
+
+    const desktopName = createArt(desktopCanvas, "assets/home/Name.png", "name");
+    const mobileArt = {};
+    const desktopArt = {};
+
+    items.forEach((item) => {
+      desktopArt[item.key] = createArt(desktopCanvas, item.src, item.cls);
+      mobileArt[item.key] = createArt(mobileCanvas, item.src, item.cls);
+    });
+
+    function setPos(img, pos, hide) {
+      if (hide) {
+        img.style.display = "none";
+        return;
+      }
+      img.style.display = "block";
+      img.style.left = `${pos.x}%`;
+      img.style.top = `${pos.y}%`;
+      img.style.width = `${pos.w}%`;
+    }
+
+    function render() {
+      desktopName.style.display = "block";
+      items.forEach((item) => {
+        setPos(desktopArt[item.key], item.desktop, item.mobileOnly);
+        setPos(mobileArt[item.key], item.mobile, false);
+      });
+    }
+
+    function numInput(value, onChange) {
+      const i = document.createElement("input");
+      i.type = "number";
+      i.step = "0.1";
+      i.value = String(value);
+      i.addEventListener("input", () => onChange(parseFloat(i.value || "0")));
+      return i;
+    }
+
+    function addControl(item) {
+      const wrap = document.createElement("div");
+      wrap.className = "item";
+      const title = document.createElement("h2");
+      title.textContent = item.key.toUpperCase();
+      wrap.appendChild(title);
+
+      const dLabel = document.createElement("p");
+      dLabel.textContent = "Desktop";
+      dLabel.style.margin = "0 0 6px";
+      dLabel.style.fontSize = "10px";
+      wrap.appendChild(dLabel);
+
+      const dGrid = document.createElement("div");
+      dGrid.className = "grid";
+      [["x", "left %"], ["y", "top %"], ["w", "width %"]].forEach(([k, lbl]) => {
+        const l = document.createElement("label");
+        l.textContent = lbl;
+        l.appendChild(numInput(item.desktop[k], (v) => { item.desktop[k] = v; render(); }));
+        dGrid.appendChild(l);
+      });
+      wrap.appendChild(dGrid);
+
+      const mLabel = document.createElement("p");
+      mLabel.textContent = "Mobile";
+      mLabel.style.margin = "8px 0 6px";
+      mLabel.style.fontSize = "10px";
+      wrap.appendChild(mLabel);
+
+      const mGrid = document.createElement("div");
+      mGrid.className = "grid";
+      [["x", "left %"], ["y", "top %"], ["w", "width %"]].forEach(([k, lbl]) => {
+        const l = document.createElement("label");
+        l.textContent = lbl;
+        l.appendChild(numInput(item.mobile[k], (v) => { item.mobile[k] = v; render(); }));
+        mGrid.appendChild(l);
+      });
+      wrap.appendChild(mGrid);
+
+      controlsEl.appendChild(wrap);
+    }
+
+    items.forEach(addControl);
+    render();
+
+    document.getElementById("exportBtn").addEventListener("click", () => {
+      const desktopLines = items
+        .filter((i) => !i.mobileOnly)
+        .map((i) => `.${i.cls} { left: ${i.desktop.x}%; top: ${i.desktop.y}%; width: ${i.desktop.w}%; }`);
+      const mobileLines = items
+        .map((i) => `  .${i.cls} { left: ${i.mobile.x}%; top: ${i.mobile.y}%; width: ${i.mobile.w}%; }`);
+
+      outputEl.value = [
+        "/* Desktop positions */",
+        ...desktopLines,
+        "",
+        "@media (max-width: 768px) {",
+        "  .home-page .name-graphic { display: none; }",
+        "  .mobile-only-art { display: block; }",
+        ...mobileLines,
+        "}"
+      ].join("\n");
+    });
+  </script>
+</body>
+</html>

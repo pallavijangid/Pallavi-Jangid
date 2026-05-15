@@ -7,32 +7,33 @@
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body class="home-page">
-  <div class="top-role">ART DIRECTOR</div>
+  <div class="top-role active" data-cursor="your">ART DIRECTOR</div>
 
   <main class="page">
     <section class="home-stage">
       <div class="home-canvas">
-        <img class="home-desktop-composite" src="assets/Image Desktop.png" alt="Home desktop composition" />
-        <img class="home-mobile-composite" src="assets/Image Mobile.png" alt="Home mobile composition" />
-        <img class="name-graphic" src="assets/home/Name.png" alt="Pallavi" />
-        <img class="float-img f-ads back" src="assets/home/Ads.png" alt="Ads" />
-        <img class="float-img f-36days front" src="assets/home/36days.png" alt="36 days" />
-        <img class="float-img f-deck front" src="assets/home/Deck.png" alt="Deck" />
-        <img class="float-img f-mobile front" src="assets/home/Mobile.png" alt="Mobile" />
-        <img class="float-img f-lp front" src="assets/home/LP.png" alt="LP" />
-        <img class="float-img f-collab front" src="assets/home/Collaboration.png" alt="Collaboration" />
+        <img class="name-graphic" src="assets/home/Name.png" alt="Pallavi" data-cursor="roll back" />
+        <a href="project-life-after-debt.html"><img class="float-img f-ads back" src="assets/home/Ads.png" alt="Ads" data-cursor="action" /></a>
+        <a href="project-36-days-of-typography.html"><img class="float-img f-36days front" src="assets/home/36days.png" alt="36 days" data-cursor="action" /></a>
+        <a href="project-brand-deck-identity.html"><img class="float-img f-deck front" src="assets/home/Deck.png" alt="Deck" data-cursor="action" /></a>
+        <a href="project-disrupt-the-pattern.html"><img class="float-img f-mobile front" src="assets/home/Mobile.png" alt="Mobile" data-cursor="action" /></a>
+        <a href="project-disrupt-the-pattern.html"><img class="float-img f-lp front" src="assets/home/LP.png" alt="LP" data-cursor="action" /></a>
+        <a href="project-the-office-poster-series.html"><img class="float-img f-collab front" src="assets/home/Collaboration.png" alt="Collaboration" data-cursor="action" /></a>
+        <img class="float-img f-pal mobile-only-art front" src="assets/home/Pal (Top).png" alt="Pal" data-cursor="roll camera" />
+        <img class="float-img f-lavi mobile-only-art front" src="assets/home/Lavi (Bottom).png" alt="Lavi" data-cursor="roll camera" />
       </div>
     </section>
   </main>
 
   <nav class="bottom-nav" aria-label="Main">
-    <a href="works.html">WORK</a>
-    <a href="play.html">PLAY</a>
-    <a href="about.html">ABOUT</a>
+      <a href="works.html" data-cursor="opening scene">WORK</a>
+      <a href="play.html" data-cursor="director's cut">PLAY</a>
+      <a href="about.html" data-cursor="roll credits">ABOUT</a>
     <div class="social">
-      <a href="https://www.linkedin.com/in/pallavi-jangid-117584179/" target="_blank" rel="noreferrer" aria-label="LinkedIn"><img src="assets/home/LinkedIn.png" alt="LinkedIn" /></a>
-      <a href="assets/home/PallaviJangid_Resume2026.pdf" target="_blank" rel="noreferrer" aria-label="Resume"><img src="assets/home/CV.png" alt="CV" /></a>
+      <a class="cursor-corner cursor-corner-left" href="https://www.linkedin.com/in/pallavi-jangid-117584179/" target="_blank" rel="noreferrer" aria-label="LinkedIn" data-cursor="press kit" data-cursor-offset="72,34"><img src="assets/home/LinkedIn.png" alt="LinkedIn" /></a>
+      <a class="cursor-corner cursor-corner-right" href="assets/home/PallaviJangid_Resume2026.pdf" target="_blank" rel="noreferrer" aria-label="Resume" data-cursor="cast" data-cursor-offset="-72,34"><img src="assets/home/CV.png" alt="CV" /></a>
     </div>
   </nav>
+  <script src="script.js"></script>
 </body>
 </html>
