@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>About | Pallavi Jangid</title>
+  <link rel="icon" type="image/png" href="../assets/favicon.png" />
+  <link rel="stylesheet" href="../styles.css" />
+</head>
+<body class="about-page-static">
+  <a class="about-top-name" href="../" data-cursor="roll back">PALLAVI JANGID</a>
+
+  <main class="page about-shell-static">
+    <section class="about-desktop-stage" aria-label="About composition">
+      <div class="about-desktop-frame">
+        <img class="about-desktop-hero" src="../assets/about/About_Image_Desktop.png" alt="About page desktop composition" />
+        <div class="about-hotspot-grid" aria-hidden="true">
+          <span class="about-hotspot" data-cursor="2014 | Photography"></span>
+          <span class="about-hotspot" data-cursor="2016-20 | NIFT"></span>
+          <span class="about-hotspot" data-cursor="2020 | Motion"></span>
+          <span class="about-hotspot" data-cursor="2021 | Graphic"></span>
+          <span class="about-hotspot" data-cursor="PUN-LUVIN"></span>
+          <span class="about-hotspot" data-cursor="2022 | 3D"></span>
+          <span class="about-hotspot" data-cursor="2023 | Brand"></span>
+          <span class="about-hotspot" data-cursor="2024 | Type"></span>
+          <span class="about-hotspot" data-cursor="2025 | GenAI"></span>
+        </div>
+      </div>
+    </section>
+
+    <img class="about-mobile-hero" src="../assets/about/Mobile About Image.png" alt="About page mobile composition" />
+  </main>
+
+  <nav class="bottom-nav" aria-label="Main">
+      <a href="../works/" data-cursor="opening scene">WORK</a>
+      <a href="../play/" data-cursor="director's cut">PLAY</a>
+      <a href="../about/" class="active" data-cursor="roll credits">ABOUT</a>
+    <div class="social">
+      <a class="cursor-corner cursor-corner-left" href="https://www.linkedin.com/in/pallavi-jangid-117584179/" target="_blank" rel="noreferrer" aria-label="LinkedIn" data-cursor="press kit" data-cursor-offset="72,34"><img src="../assets/home/LinkedIn.svg" alt="LinkedIn" /></a>
+      <a class="cursor-corner cursor-corner-right" href="../assets/home/PallaviJangid_Resume2026.pdf" target="_blank" rel="noreferrer" aria-label="Resume" data-cursor="cast" data-cursor-offset="-72,34"><img src="../assets/home/CV.svg" alt="CV" /></a>
+    </div>
+  </nav>
+
+  <script>
+    (function () {
+      const timeoutMs = 2400;
+      document.querySelectorAll('.js-smart-gif').forEach((img) => {
+        const gifSrc = img.dataset.gif;
+        const pngSrc = img.dataset.png;
+        let done = false;
+        const probe = new Image();
+        const timer = setTimeout(() => {
+          if (!done) img.src = pngSrc;
+        }, timeoutMs);
+        probe.onload = function () { done = true; clearTimeout(timer); img.src = gifSrc; };
+        probe.onerror = function () { done = true; clearTimeout(timer); img.src = pngSrc; };
+        probe.src = gifSrc;
+      });
+    })();
+  </script>
+  <script src="../script.js"></script>
+</body>
+</html>

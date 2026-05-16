@@ -217,7 +217,7 @@
         const primaryDelta = Math.abs(deltaX) > Math.abs(deltaY) ? deltaX : deltaY;
 
         if (axis === 'x') {
-          scrollTarget.scrollLeft += deltaY || deltaX;
+          scrollTarget.scrollBy({ left: deltaY || deltaX, behavior: 'instant' });
           return;
         }
 
@@ -231,7 +231,7 @@
 
         if (source === 'wheel') {
           if (deltaX < -40) {
-            window.location.href = 'works.html';
+            window.location.href = '/works/';
             return true;
           }
           return false;
@@ -300,7 +300,7 @@
 
       const touchEndHandler = () => {
         if (touchBackTriggered) {
-          window.location.href = 'works.html';
+          window.location.href = '/works/';
         }
         touchActive = false;
         touchBackTriggered = false;
