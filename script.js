@@ -221,7 +221,7 @@
           return;
         }
 
-        scrollTarget.scrollTop += primaryDelta * 0.6;
+        scrollTarget.scrollTop += primaryDelta * 1;
       };
 
       const maybeGoBackToWorks = (deltaX, deltaY, source) => {
