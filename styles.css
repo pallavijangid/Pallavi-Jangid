@@ -10,7 +10,6 @@
 
 html {
   scrollbar-width: none;
-  overflow-x: hidden;
 }
 
 html::-webkit-scrollbar,
@@ -531,7 +530,6 @@ a { color: inherit; text-decoration: none; }
   overflow-y: hidden;
   padding: 0;
   scrollbar-width: none;
-  scroll-snap-type: x proximity;
 }
 
 .works-rail::-webkit-scrollbar {
@@ -544,7 +542,6 @@ a { color: inherit; text-decoration: none; }
   display: flex;
   flex-direction: column;
   text-decoration: none;
-  scroll-snap-align: start;
 }
 
 .work-item.lowered {
@@ -563,6 +560,9 @@ a { color: inherit; text-decoration: none; }
   font-size: 24px;
   letter-spacing: 2px;
   font-weight: 500;
+  border-bottom: 3px dotted #111;
+  width: fit-content;
+  padding-bottom: 3px;
 }
 
 @media (max-width: 1100px) {
@@ -648,6 +648,24 @@ a { color: inherit; text-decoration: none; }
 
 .project-copy .year {
   margin-top: 24px;
+}
+
+.project-page-link {
+  display: inline-block;
+  margin-top: 8px;
+  font-size: clamp(12px, 1vw, 14px);
+  letter-spacing: 1px;
+  font-weight: 500;
+  color: #111;
+  text-decoration-line: underline;
+  text-decoration-style: dotted;
+  text-underline-offset: 25%;
+  text-decoration-thickness: 2px;
+}
+
+.project-page-link:hover {
+  color: #f7921f;
+  text-decoration-color: #f7921f;
 }
 
 .project-page .bottom-nav {
@@ -738,7 +756,7 @@ a { color: inherit; text-decoration: none; }
     min-height: 0;
     overflow-y: auto;
     overflow-x: hidden;
-    padding: 0 0 72px;
+    padding: 0;
     gap: 16px;
   }
 
@@ -1026,11 +1044,11 @@ a { color: inherit; text-decoration: none; }
   .play-page .bottom-nav,
   .project-page .bottom-nav,
   .about-page-static .bottom-nav {
-    position: fixed;
-    left: 16px;
-    right: 16px;
-    bottom: 16px;
-    width: auto;
+    position: static;
+    left: auto;
+    right: auto;
+    bottom: auto;
+    width: 100%;
     margin: 0;
   }
 
@@ -1055,7 +1073,7 @@ a { color: inherit; text-decoration: none; }
     min-height: 0;
     overflow-y: auto;
     overflow-x: hidden;
-    padding-bottom: 72px;
+    padding-bottom: 0;
     scroll-snap-type: none;
     -webkit-overflow-scrolling: touch;
   }
@@ -1095,7 +1113,7 @@ a { color: inherit; text-decoration: none; }
     min-height: 0;
     overflow-y: auto;
     overflow-x: hidden;
-    padding: 0 0 72px;
+    padding: 0;
     gap: 16px;
   }
 
@@ -1213,7 +1231,7 @@ a { color: inherit; text-decoration: none; }
     overflow-y: auto;
     overflow-x: hidden;
     padding-right: 0;
-    padding-bottom: 72px;
+    padding-bottom: 0;
   }
 
   .play-col {

@@ -49,6 +49,7 @@
   let hideTimer = null;
   let activeLabel = '';
   let activePointerDown = false;
+  let activeCursorBg = '';
 
   const setPosition = (x, y, label, overrideOffset = null) => {
     if (!cursor || !dot || !pill) return;
@@ -58,6 +59,7 @@
   const showDot = (x, y) => {
     if (!cursor || !dot || !pill) return;
     activeLabel = '';
+    activeCursorBg = '';
     dot.style.display = 'block';
     pill.style.display = 'none';
     setPosition(x, y, '');
@@ -65,11 +67,19 @@
     window.clearTimeout(hideTimer);
   };
 
-  const showLabel = (x, y, label, overrideOffset = null) => {
+  const setCursorColors = (background = '', text = '') => {
+    if (!pill) return;
+    pill.style.background = background || 'var(--cursor-bg)';
+    pill.style.color = text || 'var(--cursor-text)';
+  };
+
+  const showLabel = (x, y, label, overrideOffset = null, background = '', text = '') => {
     if (!cursor || !dot || !pill) return;
     activeLabel = label;
+    activeCursorBg = background || '';
     dot.style.display = 'none';
     pill.style.display = 'inline-flex';
+    setCursorColors(background, text);
     pill.textContent = label;
     pill.classList.remove('is-dimmed');
     setPosition(x, y, label, overrideOffset);
@@ -102,6 +112,8 @@
     targetElements.forEach((el) => {
       const label = el.getAttribute('data-cursor');
       const offset = el.getAttribute('data-cursor-offset');
+      const background = el.getAttribute('data-cursor-color') || '';
+      const text = el.getAttribute('data-cursor-text') || '';
 
       const resolveLabel = () => label;
       const resolveOffset = () => {
@@ -114,7 +126,7 @@
 
       el.addEventListener('pointerenter', () => {
         if (!activePointerDown) {
-          showLabel(cursorX, cursorY, resolveLabel(), moveForElement());
+          showLabel(cursorX, cursorY, resolveLabel(), moveForElement(), background, text);
         }
       });
 
@@ -126,7 +138,7 @@
 
       el.addEventListener('pointerdown', () => {
         activePointerDown = true;
-        showLabel(cursorX, cursorY, resolveLabel(), moveForElement());
+        showLabel(cursorX, cursorY, resolveLabel(), moveForElement(), background, text);
       });
 
       el.addEventListener('pointerup', () => {
@@ -179,6 +191,9 @@
     cursor.style.top = `${clamped.top}px`;
     cursor.style.transform = 'translate3d(0, 0, 0)';
     cursor.style.transformOrigin = shift.anchor || cfg.anchor;
+    if (activeCursorBg && pill) {
+      pill.style.background = activeCursorBg;
+    }
   };
 
   const attachScrollRouting = () => {
@@ -206,7 +221,7 @@
           return;
         }
 
-        scrollTarget.scrollTop += primaryDelta * 0.35;
+        scrollTarget.scrollTop += primaryDelta * 0.6;
       };
 
       const maybeGoBackToWorks = (deltaX, deltaY, source) => {
