@@ -185,6 +185,10 @@
     pages.forEach(({ page, rail, axis }) => {
       const isMobileWorks = axis === 'x' && window.matchMedia('(max-width: 768px)').matches;
       if (isMobileWorks) return;
+      // On mobile, the project page uses native vertical scroll on .project-shell.
+      // Skip JS routing so event.preventDefault() doesn't block touch scroll.
+      const isMobileProject = axis === 'y' && window.matchMedia('(max-width: 768px)').matches;
+      if (isMobileProject) return;
 
       let touchStartY = 0;
       let touchStartX = 0;
