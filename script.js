@@ -217,7 +217,7 @@
         const primaryDelta = Math.abs(deltaX) > Math.abs(deltaY) ? deltaX : deltaY;
 
         if (axis === 'x') {
-          scrollTarget.scrollBy({ left: deltaY || deltaX, behavior: 'instant' });
+          scrollTarget.scrollLeft += deltaY || deltaX;
           return;
         }
 
