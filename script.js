@@ -205,6 +205,16 @@
       const isMobileProject = axis === 'y' && window.matchMedia('(max-width: 768px)').matches;
       if (isMobileProject) return;
 
+      if (axis === 'x') {
+        const wheelHandler = (event) => {
+          event.preventDefault();
+          rail.scrollLeft += event.deltaY || event.deltaX;
+        };
+
+        rail.addEventListener('wheel', wheelHandler, { passive: false });
+        return;
+      }
+
       let touchStartY = 0;
       let touchStartX = 0;
       let touchActive = false;
@@ -280,11 +290,7 @@
         event.preventDefault();
       };
 
-      window.addEventListener(
-        'wheel',
-        wheelHandler,
-        { passive: false, capture: true }
-      );
+      window.addEventListener('wheel', wheelHandler, { passive: false, capture: true });
 
       window.addEventListener(
         'touchstart',
